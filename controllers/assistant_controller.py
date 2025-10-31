@@ -17,6 +17,8 @@ def create_assistant(assistant_id, name, role):
         return
     try:
         # TODO: Something is missing here
+        assistant = AssistantModel(assistant_id, name)
+        
         assistant_service.insert(assistant)
         success(f"Assistant {name} created with ID: {assistant_id}")
     except Exception as e:
